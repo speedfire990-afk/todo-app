@@ -160,7 +160,7 @@ function App() {
           />
 
           <ToggleSection
-            label="Показать беклог"
+            label="Беклог"
             isOpen={isBacklogOpen}
             count={groupedTasks.backlog.length}
             variant="backlog"
@@ -180,7 +180,7 @@ function App() {
           )}
 
           <ToggleSection
-            label="Показать выполненные задачи"
+            label="Выполненные задачи"
             isOpen={isCompletedOpen}
             count={groupedTasks.completed.length}
             variant="completed"
@@ -207,23 +207,6 @@ function App() {
 function Header({ onAdd }) {
   return (
     <header className="header">
-      <div className="status-row" aria-hidden="true">
-        <span>9:30 PM</span>
-        <span className="status-icons">
-          <span className="cellular">
-            <i />
-            <i />
-            <i />
-            <i />
-          </span>
-          <span className="wifi">
-            <i />
-          </span>
-          <span className="battery">
-            <i />
-          </span>
-        </span>
-      </div>
       <div className="title-row">
         <h1>Дела на день</h1>
         <button className="add-button" type="button" onClick={onAdd} aria-label="Добавить задачу">
